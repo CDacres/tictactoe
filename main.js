@@ -15,10 +15,29 @@ $('.square').one('click', function (event) {
 	player = false;
 	var a = parseFloat($(this).attr('id'));
 	arr[a]='x';
+	checkWinner(arr);
 	} else {
 	$(this).toggleClass('playerO');
 	player = true;
 	var a = parseFloat($(this).attr('id'));
 	arr[a]='o';
+	checkWinner(arr);
 	}
 });
+
+function checkWinner(arr) {
+	if ((arr[0] === arr[1]) && (arr[0] === arr[2])) {
+		outputWinner(arr[0]);
+	} else if ((arr[3] === arr[4]) && (arr[3] === arr[5])) {
+		outputWinner(arr[0]);
+	}
+}
+
+function outputWinner(index) {
+	if (index === 'x') {
+		alert('X Wins!');
+	}
+	else {
+		alert('O Wins!');
+	}
+}
