@@ -5,19 +5,26 @@
 }
 
 .square {
+	font-family: helvetica, sans-serif;
 	display: inline-block;
 	border-style: solid;
 	border-color: black;
 	height: 190px;
 	width: 190px;
-	color: rgba(0,0,0,0);
 	margin: 2px 0.5px;
+	vertical-align: top;
 }
 
 .playerX {
 	background-color: navy;
+	color: #cd7f32;
+	text-align: center;
+	font-size: 169px;
 }
 
 .playerO {
-	background-color: orange;
+	background-color: #cd7f32;
+	color: navy;
+	text-align: center;
+	font-size: 169px;
 }

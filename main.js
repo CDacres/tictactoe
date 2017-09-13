@@ -8,19 +8,24 @@
 
 var player = true;
 var arr = [];
+var moves = 0;
 
 $('.square').one('click', function (event) {
 	if (player) {
-	$(this).toggleClass('playerX');
+	$(this).addClass('playerX');
+	$(this).html('X');
 	player = false;
 	var a = parseFloat($(this).attr('id'));
 	arr[a]='x';
+	moves++;
 	checkWinner(arr);
 	} else {
-	$(this).toggleClass('playerO');
+	$(this).addClass('playerO');
+	$(this).html('O');
 	player = true;
 	var a = parseFloat($(this).attr('id'));
 	arr[a]='o';
+	moves ++;
 	checkWinner(arr);
 	}
 });
@@ -44,6 +49,8 @@ function checkWinner(arr) {
 		outputWinner(arr[0]);
 	} else if (arr[2] !== undefined && (arr[2] === arr[4]) && (arr[2] === arr[6])) {
 		outputWinner(arr[2]);
+	} else if (moves === 9) {
+		outputTie();
 	}
 }
 
@@ -54,4 +61,15 @@ function outputWinner(index) {
 	else {
 		alert('O Wins!');
 	}
+}
+
+function outputTie(){
+	alert('It\'s a tie!')
+
+}
+
+function clear() {
+	$('.square').removeClass('playerX');
+	$('.square').removeClass('playerO');
+	$('.square').html('');
 }
