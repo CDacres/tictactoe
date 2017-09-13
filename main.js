@@ -13,12 +13,12 @@ $('.square').one('click', function (event) {
 	if (player) {
 	$(this).toggleClass('playerX');
 	player = false;
-	var a = parseFloat($(this).html());
+	var a = parseFloat($(this).attr('id'));
 	arr[a]='x';
 	} else {
 	$(this).toggleClass('playerO');
 	player = true;
-	var a = parseFloat($(this).html());
+	var a = parseFloat($(this).attr('id'));
 	arr[a]='o';
 	}
 });
