@@ -19,6 +19,7 @@ $('.square').one('click', function (event) {
 	arr[a]='x';
 	moves++;
 	checkWinner(arr);
+	$('h2').html('O\'s Turn');
 	} else {
 	$(this).addClass('playerO');
 	$(this).html('O');
@@ -27,7 +28,12 @@ $('.square').one('click', function (event) {
 	arr[a]='o';
 	moves ++;
 	checkWinner(arr);
+	$('h2').html('X\'s Turn');
 	}
+});
+
+$('#button').click(function (event) {
+	clear();
 });
 
 function checkWinner(arr) {
@@ -69,7 +75,5 @@ function outputTie(){
 }
 
 function clear() {
-	$('.square').removeClass('playerX');
-	$('.square').removeClass('playerO');
-	$('.square').html('');
+	location.reload();
 }

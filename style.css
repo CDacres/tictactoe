@@ -1,3 +1,12 @@
+h1 {
+	text-align: center;
+}
+
+h2 {
+	height: 15px;
+	text-align: center;
+}
+
 .holder{
 	margin: 0 auto;
 	height:600px;
@@ -27,4 +36,9 @@
 	color: navy;
 	text-align: center;
 	font-size: 169px;
+}
+
+#button {
+	margin: auto;
+	display: block;
 }
