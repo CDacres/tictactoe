@@ -26,10 +26,12 @@ $('.square').one('click', function (event) {
 });
 
 function checkWinner(arr) {
-	if ((arr[0] === arr[1]) && (arr[0] === arr[2])) {
+	if (arr[0] !== undefined && (arr[0] === arr[1]) && (arr[0] === arr[2])) {
 		outputWinner(arr[0]);
-	} else if ((arr[3] === arr[4]) && (arr[3] === arr[5])) {
-		outputWinner(arr[0]);
+	} else if (arr[3] !== undefined && (arr[3] === arr[4]) && (arr[3] === arr[5])) {
+		outputWinner(arr[3]);
+	} else if (arr[6] !== undefined && (arr[6] === arr[7]) && (arr[6] === arr[8])) {
+		outputWinner(arr[6]);
 	}
 }
 
