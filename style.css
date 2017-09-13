@@ -1,0 +1,23 @@
+.holder{
+	margin: 0 auto;
+	height:600px;
+	width: 600px;
+}
+
+.square {
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+	height: 190px;
+	width: 190px;
+	color: rgba(0,0,0,0);
+	margin: 2px 0.5px;
+}
+
+.playerX {
+	background-color: navy;
+}
+
+.playerO {
+	background-color: orange;
+}
